@@ -43,7 +43,7 @@ export default React.memo((props: MenuItemProps) => {
         className={`${prefix}-column-item-label`}
         style={{ paddingLeft: checkboxHidden ? '0px' : '' }}
       >
-        <span>{title}</span>
+        {/* <span>{title}</span> */}
       </p>
       {!hasChildren ? null : loading && !children?.length ? (
         <LoadingOutlined />

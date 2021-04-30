@@ -7,6 +7,7 @@ import MultiCascader from '../container'
 
 export default React.memo((props: Pick<MenuItemProps, 'node'>) => {
   const { node } = props
+  const { children, value, title, isLeaf } = node
   const {
     value: containerValue,
     handleSelectChange,
@@ -33,6 +34,8 @@ export default React.memo((props: Pick<MenuItemProps, 'node'>) => {
       onChange={handleChange}
       checked={checked}
       indeterminate={indeterminate}
-    />
+    >
+      {title}
+    </Checkbox>
   )
 })
